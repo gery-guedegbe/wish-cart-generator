@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Header from "./components/Header";
+import Card1 from "./components/Cards/Card1/Card1";
+import Card2 from "./components/Cards/Card2/Card2 ";
+import Card3 from "./components/Cards/Card3/Card3";
+import Card4 from "./components/Cards/Card4/Card4";
+import Card5 from "./components/Cards/Card5/Card5";
+import Card6 from "./components/Cards/Card6/Card6";
+import { GlobalStateProvider } from "./GlobalStateContext";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <GlobalStateProvider>
+        <Header />
+        <main>
+          <Card1 />
+          <Card2 />
+          <Card3 />
+          <Card4 />
+          <Card5 />
+          <Card6 />
+        </main>
+      </GlobalStateProvider>
     </div>
   );
 }

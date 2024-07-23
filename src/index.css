@@ -1,13 +1,155 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;700;900&display=swap');
+
+:root{
+  /*colors*/
+  --yelow: #FFCC00;
+  --yelow-bold: #FFAA00;
+  --black: #000000;
+  --white: #FFFFFF;
+  --tomato: #e4322f;
+
+  /*font*/
+  --body-font:'Kumbh Sans', sans-serif;
+  --principal-card-font: 'Amatic SC', sans-serif;
+  --second-card-font: 'Satisfy', cursive;
+  /*shadow*/
+  --box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img{
+  max-width: 100%;
+}
+
+body{
+  max-width: 100%;
+  min-height: 100vh;
+  display: grid;
+  margin: 0 auto;
+  padding: 4rem 4rem;
+  font-family: var(--body-font);
+}
+
+.card_container{
+  height: 60vh;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  color: var(--black);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid transparent;
+  box-shadow: var( --box-shadow);
+  text-align: center;
+  position: relative;
+}
+
+.overlay{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.75);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 0.5s ease;
+}
+
+.card_container:hover .overlay{
+  height: 100%;
+}
+
+.share-btn i{ 
+  font-size: 2rem;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  margin-top: 1rem;
+} 
+
+.share-btn i:hover{
+  color: var(--yelow);
+}
+
+@media only screen and (max-width: 600px) {
+  body{
+    padding: 1rem;
+    max-width: 100%;
+    outline: none;
+  }
+
+  .card_container{
+    width: 100%;
+   
+  }
+
+  .card_h1{
+    font-size: 1rem;
+  }
+
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  body{
+    padding: 1rem;
+    margin: 0 auto;
+    outline: none;
+    max-width: 100%;
+  }
+
+  .card_container{
+    height: 100%;
+    width: 100%;
+    gap: 1.5rem;
+  }
+
+  .home, .about{
+    display: none;
+  }
+
+
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1199px) {
+  body{
+    padding: 2rem;
+    margin: 0 auto;
+    outline: none;
+    max-width: 100%;
+  }
+
+  .card_container{
+    height: 100%;
+    width: 100%;
+    gap: 1.4rem;
+  }
+
+  .home, .about{
+    display: none;
+  }
+
+}
+
+@media only screen and (min-width: 199) and (max-width: 599px){
+  body{
+    padding: 1rem;
+    margin: 0 auto;
+    max-width: 100%;
+    outline: none;
+  }
 }

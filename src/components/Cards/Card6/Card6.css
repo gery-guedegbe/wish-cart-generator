@@ -1,0 +1,85 @@
+li{
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 0.4rem;
+}
+
+.card6_ul{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; 
+}
+
+.card6_h1{
+    font-family: var( --second-card-font);
+    font-size: 2.5rem;
+}
+
+.card6_name{
+    font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .card6_ul{
+        gap: 0.8rem;
+    }
+
+    .card6_ul li{
+        font-size: 1rem;
+    }
+
+    .card6_h1{
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px){
+    .card6_ul{
+        gap: 0.6rem;
+    }
+
+    .card6_ul li{
+        font-size: 0.6rem;
+    }
+
+    .card6_h1, .card6_name{
+        font-size: 1.5rem;
+    }
+
+    .heart_imgs{
+        width: 100px;
+        height: 100px;
+    }
+
+    .li{
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1199px){
+    .card6_ul{
+        gap: 0.8rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .card6_ul li{
+    font-size: 0.8rem;
+    }
+
+    .card6_h1{
+        font-size: 1.8rem;
+        margin: -0.4rem 0;
+    }
+
+    .heart_imgs{
+        width: 100px;
+        height: 100px;
+    }
+
+    .li{
+        font-size: 0.8rem;
+        margin-top: 0.3rem;
+    }
+}

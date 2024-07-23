@@ -1,0 +1,71 @@
+
+.card3_h1{
+    text-transform: lowercase;
+    font-family: var(--second-card-font);
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.card3_ul{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card3_ul li{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+}
+
+.card3_name{
+    font-weight: 800;
+}
+
+@media only screen and (max-width: 600px) {
+    .card3_ul{
+        gap: 1rem;
+    }
+
+    .card3_ul li{
+        font-size: 1rem;
+    }
+
+    .card3_h1{
+        font-size: 2rem;
+    }
+
+     .card3_name{
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px){
+    .card3_ul{
+        gap: 0.6rem;
+    }
+
+    .card3_ul li{
+        font-size: 0.8rem;
+    }
+
+    .card3_h1, .card3_name{
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1199px){
+    .card3_ul{
+        gap: 0.6rem;
+    }
+
+    .card3_ul li{
+        font-size: 0.8rem;
+    }
+
+    .card3_h1, .card3_name{
+        font-size: 1.6rem;
+        margin: 0.4rem 0;
+    }
+}

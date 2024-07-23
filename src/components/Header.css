@@ -1,0 +1,139 @@
+header{
+    width: 100%;    
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+header div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+ul li{
+    list-style: none;
+    font-size: 1.4rem;
+    color: var(--black);
+}
+
+ul li a{
+    text-decoration: none;
+    color: var(--black);
+    cursor: pointer;
+}
+
+ul li a:hover{
+    border-bottom: 4px solid var(--yelow);
+    padding-bottom: 0.5rem;
+}
+
+.logo{
+    width: 250px;
+}
+
+form{
+    display: flex;
+    gap: 1rem;
+}
+
+form input{
+    width: 20rem;
+    height: 5vh;
+    outline: none;
+    border-radius: 1rem;
+    border: 3px solid var(--black);
+}
+
+input::placeholder{
+    font-size: 1rem;
+    padding: 0 1rem;
+}
+
+button{
+    border-radius: 1rem;
+    padding: 0 2rem;
+    background: var(--yelow);
+    color: var(--black);
+    font-size: 1rem;
+    font-weight: 800;
+    border: 3px solid var(--black);
+}
+
+button:hover{
+    background: var(--yelow-bold);
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+button:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+   
+
+
+@media only screen and (max-width: 600px){
+
+    header{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .home, .about{
+        display: none;
+    }
+
+    .logo{
+        width: 120px;
+    }
+
+    form input{
+        width: 6rem;
+        height: 2rem;
+        border: 1px solid var(--black);
+    }
+
+    button{
+        border: 1px solid var(--black);
+        padding: 0.5rem 0.3rem;
+        font-size: 0.5rem;
+        border-radius: 0.3rem;
+    }
+
+    input::placeholder{
+        font-size: 0.5rem;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    header{
+        width: 100%;
+        align-items: center;
+    }
+
+    .logo{
+        width: 170px;
+    }
+
+    form input{
+        width: 15rem;
+        height: 2rem;
+        border: 0.5px solid var(--black);
+    }
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1199px) {
+    header{
+        width: 100%;
+        margin: 0 auto;
+    }
+}

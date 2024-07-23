@@ -1,0 +1,61 @@
+.card4_ul{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; 
+}
+
+.card4_ul li{
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 0.4rem;
+    text-transform: uppercase;
+}
+
+.card4_h1{
+    font-size: 2rem;
+    font-family: var( --second-card-font );
+}
+
+
+@media only screen and (max-width: 600px) {
+    .card4_ul{
+        gap: 0.8rem;
+    }
+
+    .card4_ul li{
+        font-size: 0.8rem;
+    }
+
+    .card4_h1{
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px){
+    .card4_ul{
+        gap: 0.6rem;
+    }
+
+    .card4_ul li{
+        font-size: 0.6rem;
+    }
+
+    .card4_h1, .card4_name{
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1199px){
+    .card4_ul{
+        gap: 0.8rem;
+    }
+
+    .card4_ul li{
+    font-size: 0.8rem;
+    }
+
+    .card4_h1{
+        font-size: 1.8rem;
+        margin: -0.4rem 0;
+    }
+}
